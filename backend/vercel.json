@@ -7,6 +7,10 @@
       "use": "@vercel/node"
     },
     {
+      "src": "routes/notes.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "src/**/*",
       "use": "@vercel/static"
     }
