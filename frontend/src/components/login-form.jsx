@@ -30,7 +30,7 @@ export function LoginForm({ className, ...props }) {
     setLoading(true)
 
     try {
-      const res = await fetch("http://localhost:5050/api/auth/login", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_BASEURL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -47,7 +47,7 @@ export function LoginForm({ className, ...props }) {
       localStorage.setItem("token", data.access_token)
 
       // ✅ Ambil profil user dari Auth0
-      const profileRes = await fetch("http://localhost:5050/api/auth/me", {
+      const profileRes = await fetch(`${import.meta.env.VITE_BACKEND_BASEURL}/api/auth/me`, {
         headers: {
           Authorization: `Bearer ${data.access_token}`,
         },
