@@ -8,6 +8,10 @@ const generateId = () => {
   return `notes-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running");
+});
+
 // ==========================================
 // 📝 CREATE NOTE (Halaman Write)
 // ==========================================
