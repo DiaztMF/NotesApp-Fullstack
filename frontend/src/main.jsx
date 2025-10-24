@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")).render(
       domain={domain}
       clientId={clientId}
       authorizationParams={{
-        redirect_uri: "http://localhost:5173/sign-in",
+        redirect_uri: `${import.meta.env.VITE_FRONTEND_BASEURL}/sign-in`,
         audience: "https://dev-vrmrrfejyibrxngp.us.auth0.com/api/v2/",
       }}
     >
