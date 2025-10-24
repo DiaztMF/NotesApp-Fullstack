@@ -21,6 +21,10 @@ app.use("/notes", notesRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/auth", profilesRouter);
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running");
+});
+
 // Server listen
 app.listen(PORT, () => {
   console.log(`🚀 Server listening on port ${PORT}`);
