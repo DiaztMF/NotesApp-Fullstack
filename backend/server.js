@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/notes", notesRouter);
+app.use("/api/notes", notesRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/auth", profilesRouter);
 
