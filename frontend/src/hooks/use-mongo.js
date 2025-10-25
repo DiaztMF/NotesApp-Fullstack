@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { toast } from "sonner";
 
-const API_BASE = `${import.meta.env.VITE_BACKEND_BASEURL}/notes`;
+const API_BASE = `${import.meta.env.VITE_BACKEND_BASEURL}/api/notes`;
 
 export default function useMongo(userId) {
   const [notes, setNotes] = useState([]);
