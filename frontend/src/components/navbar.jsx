@@ -104,7 +104,7 @@ export function NavBar() {
                 <ListItem href="/contact-us" title="Contact Us">
                   Contact us for feedbacks and support.
                 </ListItem>
-                <ListItem href="/documentation" title="Documentation">
+                <ListItem href="https://github.com/DiaztMF/NotesApp-Fullstack" title="Documentation">
                   View documentation in github.
                 </ListItem>
               </ul>
@@ -128,7 +128,7 @@ export function NavBar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="">Docs</Link>
+              <a href="https://github.com/DiaztMF/NotesApp-Fullstack" target="_blank">Docs</a>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -141,9 +141,6 @@ export function NavBar() {
         <>
           <Button variant="outline" asChild>
             <Link to="/sign-in">Sign In</Link>
-          </Button>
-          <Button className="bg-[linear-gradient(75deg,#59FF72_0%,#329404_100%)]">
-            <Link to="/sign-up">Sign Up</Link>
           </Button>
         </>
       )}

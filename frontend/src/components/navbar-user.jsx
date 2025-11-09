@@ -20,12 +20,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const MENU_ITEMS = [
-  { icon: User, label: "Account", href: "/account" },
-  { icon: ChartNoAxesColumn, label: "Statistic", href: "/statistic" },
-  { icon: Bell, label: "Notifications", href: "/notifications" },
-];
-
 export function NavUser() {
   const { user: auth0User, isAuthenticated, isLoading, logout } = useAuth0();
   const [localUser, setLocalUser] = useState(null);
@@ -136,20 +130,6 @@ export function NavUser() {
             </div>
           </div>
         </DropdownMenuLabel>
-
-        <DropdownMenuSeparator />
-
-        {/* Menu Items */}
-        <DropdownMenuGroup>
-          {MENU_ITEMS.map((item) => (
-            <DropdownMenuItem key={item.label} asChild>
-              <Link to={item.href} className="flex items-center gap-2">
-                <item.icon className="h-4 w-4" />
-                <span>{item.label}</span>
-              </Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuGroup>
 
         <DropdownMenuSeparator />
 
