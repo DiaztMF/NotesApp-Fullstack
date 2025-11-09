@@ -234,7 +234,7 @@ export function ViewArchivedNotesPage() {
                       <div className="flex justify-center gap-4 mt-4">
                         
                         <button
-                          onClick={() => handleViewNote(note.id)}
+                          onClick={() => handleViewNote(note)}
                           className="flex justify-center align-center px-[16px] py-[9px] mx-4 bg-[#404040] hover:bg-[#505050] text-white rounded transition-colors"
                         >
                           <Eye className="w-[18px] h-[18px]" />
